@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1250" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="Managers"
+    ViewObjectName="model.EmployeesView">
+    <ViewCriteriaUsage
+      Name="EmployeesViewCriteria"
+      FullName="model.EmployeesView.EmployeesViewCriteria"/>
+  </ViewUsage>
+</AppModule>
