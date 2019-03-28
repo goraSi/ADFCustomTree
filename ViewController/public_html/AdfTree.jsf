@@ -6,7 +6,7 @@
         <af:form id="f1">
             <af:panelBox text="PanelBox1" id="pb1">
                 <af:treeTable value="#{viewScope.TreeModelBean.treeModel}" var="node" width="100%"
-                              columnStretching="last" id="tt1"
+                              columnStretching="last" id="tt1" fetchSize="1000" autoHeightRows="-1"
                               rowDisclosureListener="#{viewScope.TreeModelBean.treeRowDisclose}"
                               rootNodeRendered="false">
                     <f:facet name="nodeStamp">
@@ -25,6 +25,12 @@
                         </af:column>
                     </f:facet>
                 </af:treeTable>
+                <f:facet name="toolbar">
+                    <af:toolbar id="t1">
+                        <af:button text="+" id="b1" actionListener="#{viewScope.TreeModelBean.expandTree}" partialSubmit="false"/>
+                        <af:button text="-" id="b2" actionListener="#{viewScope.TreeModelBean.collapseTree}" partialSubmit="false"/>
+                    </af:toolbar>
+                </f:facet>
             </af:panelBox>
             <af:panelBox text="PanelBox2" id="pb2">
                 <f:facet name="toolbar"/>
